@@ -210,26 +210,31 @@ h2::selection {
 
 .skills-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.skill h3 {
+.skill-card {
+  background: #1a1a1a; /* لون البطاقة نفسه المستخدم للمشاريع */
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.skill-card h3 {
   margin-bottom: 0.5rem;
   color: #00aaff;
 }
 
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background: #333;
-  border-radius: 5px;
+.skill-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
-
-.skill-progress {
-  height: 10px;
-  background: #007BFF;
-  border-radius: 5px;
-}
-
