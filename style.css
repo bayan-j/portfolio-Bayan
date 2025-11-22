@@ -341,6 +341,14 @@ body {
   padding: 4rem 0;
 }
 
+/* Limit card width on small screens */
+@media (max-width: 480px) {
+  .skill-card {
+    max-width: 90%;
+    margin: 0 auto; /* center the card */
+  }
+}
+
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
