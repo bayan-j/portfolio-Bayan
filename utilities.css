@@ -178,3 +178,23 @@ h2::selection {
 
 /* خبرة*/
 
+.experience-container {
+  padding: 4rem 0;
+}
+
+.experience .card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-bio h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.experience-bio p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
