@@ -233,20 +233,17 @@ h2::selection {
   color: var(--text-color); /* dynamic text color */
 }
 
-/* Hover Effect */
 .skill-card:hover {
-  background: var(--card-hover-bg);
+  background: #000 !important;
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
-.skill-card:hover h3 {
-  color: var(--text-hover-color);
+.skill-card:hover h3,
+.skill-card:hover p {
+  color: #fff !important;
 }
 
-.skill-card:hover p {
-  color: var(--text-hover-color-secondary);
-}
 
 /* Light Mode Variables */
 body.light-mode {
@@ -265,4 +262,5 @@ body.dark-mode {
   --text-hover-color: #00d1ff;
   --text-hover-color-secondary: #eee;
 }
+
 
