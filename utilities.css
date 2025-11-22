@@ -204,9 +204,17 @@ h2::selection {
 
 
 
-
 .skills-container {
   padding: 4rem 0;
+  /* background: #111; */ /* نحذف أو نعلق الخلفية السوداء */
+}
+
+.skill-card {
+  background: #1a1a1a; /* هذا لون البطاقة نفسه */
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* أخف الظل ليظهر بشكل لطيف */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skills-list {
@@ -216,17 +224,9 @@ h2::selection {
   margin-top: 2rem;
 }
 
-.skill-card {
-  background: #1a1a1a; /* مشابه لتصميم بطاقات المشاريع */
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .skill-card h3 {
@@ -235,7 +235,7 @@ h2::selection {
 }
 
 .skill-card p {
-  color: #ccc;
+  color: #333; /* لون نص فاتح لكن ليس أبيض صارخ */
   font-size: 0.95rem;
   line-height: 1.4;
 }
