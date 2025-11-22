@@ -105,7 +105,7 @@ body {
 
 .navbar #logo img {
   display: block;
-  width: 40px;
+  width: 50px;
 }
 
 .navbar .btn {
@@ -162,6 +162,7 @@ body {
   background-color: var(--card-background);
   margin: 5.5rem 0;
 }
+
 /* Projects */
 #projects {
   display: flex;
@@ -256,8 +257,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 670px) {
   .navbar .nav-menu {
@@ -345,7 +345,8 @@ body {
 @media (max-width: 480px) {
   .skill-card {
     max-width: 90%;
-    margin: 0 auto; /* center the card */
+    margin: 0 auto;
+    /* center the card */
   }
 }
 
@@ -361,7 +362,7 @@ body {
   background: var(--card-bg, #1a1a1a);
   border-radius: 12px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
@@ -369,7 +370,7 @@ body {
 .skill-card:hover {
   background: #000 !important;
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .skill-card:hover h3,
@@ -414,7 +415,8 @@ body {
 /* Small screens */
 @media (max-width: 480px) {
   .skills-list {
-    grid-template-columns: 1fr; /* one card per row */
+    grid-template-columns: 1fr;
+    /* one card per row */
     gap: 1.2rem;
   }
 

@@ -55,7 +55,7 @@ h2::selection {
   cursor: pointer;
 }
 
-.toggle-icons > img {
+.toggle-icons>img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
 }
@@ -64,11 +64,11 @@ h2::selection {
   transform: rotate(10deg);
 }
 
-#switch:checked + .toggle-icons .moon {
+#switch:checked+.toggle-icons .moon {
   transform: rotate(250deg);
 }
 
-#switch:checked + .toggle-icons .sun {
+#switch:checked+.toggle-icons .sun {
   transform: rotate(100deg);
 }
 
@@ -82,7 +82,7 @@ h2::selection {
   padding: 1rem;
 }
 
-.header-container > div {
+.header-container>div {
   margin-top: 1rem;
 }
 
@@ -187,6 +187,7 @@ h2::selection {
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .experience-bio h3 {
@@ -220,23 +221,25 @@ h2::selection {
 
 /* Skill Card */
 .skill-card {
-  background: var(--card-bg); /* dynamic background */
+  background: var(--card-bg);
+  /* dynamic background */
   border-radius: 12px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
 }
 
 .skill-card h3,
 .skill-card p {
   transition: color 0.4s ease;
-  color: var(--text-color); /* dynamic text color */
+  color: var(--text-color);
+  /* dynamic text color */
 }
 
 .skill-card:hover {
   background: #000 !important;
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .skill-card:hover h3,
@@ -263,4 +266,71 @@ body.dark-mode {
   --text-hover-color-secondary: #eee;
 }
 
+[data-theme="dark"] .experience .card {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: none;
+}
 
+[data-theme="dark"] .experience-bio h3 {
+  color: #000000;
+}
+
+[data-theme="dark"] .experience-bio p {
+  color: #000000;
+}
+
+/* Dark mode specific styling for skills section */
+[data-theme="dark"] .skill-card {
+  background: #ffffff;
+  color: #000000;
+}
+
+[data-theme="dark"] .skill-card h3,
+[data-theme="dark"] .skill-card p {
+  color: #000000;
+}
+
+[data-theme="dark"] .skill-card:hover {
+  background: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .skill-card:hover h3,
+[data-theme="dark"] .skill-card:hover p {
+  color: #000000 !important;
+}
+
+/* Responsive styles for experience cards on mobile */
+@media (max-width: 768px) {
+  .experience .card {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .experience-bio h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .experience-bio p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience .card {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .experience-bio h3 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .experience-bio p {
+    font-size: 0.85rem;
+  }
+}
