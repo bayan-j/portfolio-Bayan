@@ -19,37 +19,55 @@ function closeMenu() {
 }
 
 // Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light"); //add this
+  function switchTheme(e) {
+    const logo = document.querySelector("#logo img");
+
+    if (e.target.checked) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark"); //add this
+      // Change logo to white version in dark mode
+      logo.src = "bayan-white.png";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light"); //add this
+      // Change logo back to original in light mode
+      logo.src = "bayan.png";
+    }
   }
-}
 
-toggleSwitch.addEventListener("change", switchTheme, false);
-
-//  Store color theme for future visits
-
-// Save user preference on load
-
-const currentTheme = localStorage.getItem("theme")
-  ? localStorage.getItem("theme")
-  : null;
-
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
+  if (toggleSwitch) {
+    toggleSwitch.addEventListener("change", switchTheme, false);
   }
-}
+
+  //  Store color theme for future visits
+
+  // Save user preference on load
+
+  const currentTheme = localStorage.getItem("theme")
+    ? localStorage.getItem("theme")
+    : null;
+
+  if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    const logo = document.querySelector("#logo img");
+
+    if (logo) {
+      if (currentTheme === "dark") {
+        if (toggleSwitch) {
+          toggleSwitch.checked = true;
+        }
+        // Set white logo for dark mode
+        logo.src = "bayan-white.png";
+      } else {
+        // Set original logo for light mode
+        logo.src = "bayan.png";
+      }
+    }
+  }
+});
 
 //Adding date
 
