@@ -1,0 +1,16 @@
+{
+    "name": "bayan-portfolio",
+    "version": "1.0.0",
+    "description": "Bayan's Professional Portfolio",
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "dev": "wrangler dev"
+    },
+    "keywords": [
+        "portfolio",
+        "website",
+        "static"
+    ],
+    "author": "Bayan Bakehil",
+    "license": "MIT"
+}

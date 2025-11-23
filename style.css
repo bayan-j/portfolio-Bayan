@@ -234,36 +234,156 @@ body {
   margin: 2rem 0;
 }
 
+/* Project Image */
+.project-image {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Project Cards - Make them nicer */
 .project {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.card .project-bio p {
-  font-size: 0.83rem;
-}
-
-.card .project-bio h3 {
-  font-size: 0.9rem;
+.card {
+  max-width: 100%;
+  min-height: auto;
 }
 
 .project-info {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  opacity: 0;
+  opacity: 1;
   position: relative;
   transition: 0.5s ease-in-out;
+  height: 100%;
 }
 
 .project-bio {
+  flex: 1;
+}
+
+.project-bio h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+  transition: color 0.4s ease;
+  line-height: 1.3;
+}
+
+.project-bio p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: color 0.4s ease;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  top: 160px;
-  left: 10px;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+[data-theme="dark"] .project-link {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Project Tools Tags */
+.project-tools {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tool-tag:hover {
+  background: var(--primary-color);
+  color: var(--text-color-two);
+  transform: translateY(-2px);
+}
+
+.card:hover .tool-tag {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .tool-tag:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Project Video Button */
+.project-video {
+  margin-top: 1.2rem;
+}
+
+.project-video .btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: var(--weight-semibold);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-video .btn:hover {
+  background: var(--primary-color);
+  color: var(--text-color-two);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .project-video .btn {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .project-video .btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 /* Footer */
