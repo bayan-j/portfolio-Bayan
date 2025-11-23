@@ -80,6 +80,13 @@ body {
   right: 0;
   z-index: 20;
   background: var(--bg-primary);
+  animation: fadeInDown 0.8s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .container {
@@ -101,15 +108,67 @@ body {
   margin: 0 1rem;
   font-size: 0.8rem;
   font-weight: var(--weight-semibold);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Add hover effect to nav links */
+.navbar .nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Add underline effect on hover */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Add staggered animation delays for nav links */
+.navbar .nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navbar .nav-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navbar .nav-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.navbar .nav-link:nth-child(4) {
+  animation-delay: 0.4s;
 }
 
 .navbar #logo img {
   display: block;
   width: 75px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.1s forwards;
+  transition: transform 0.3s ease;
+}
+
+.navbar #logo img:hover {
+  transform: scale(1.05);
 }
 
 .navbar .btn {
   margin-right: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
 
 .fas.fa-arrow-right {
@@ -333,9 +392,30 @@ body {
   }
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .skills-container {
   padding: 4rem 0;
