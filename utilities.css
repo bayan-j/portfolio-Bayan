@@ -356,17 +356,16 @@ body.dark-mode {
 }
 
 [data-theme="dark"] .experience .card {
-  background: var(--card-bg);
-  color: var(--text-color);
-  box-shadow: none;
+  background: #ffffff;
+  color: #000000;
 }
 
 [data-theme="dark"] .experience-bio h3 {
-  color: var(--text-color);
+  color: #000000;
 }
 
 [data-theme="dark"] .experience-bio p {
-  color: var(--text-color);
+  color: #000000;
 }
 
 /* Dark mode hover effects for experience cards - matching skills section */
