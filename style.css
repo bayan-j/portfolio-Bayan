@@ -442,7 +442,7 @@ body {
 }
 
 .certificate-badge img {
-  height: 150px;
+  height: 100px;
   width: auto;
   transition: transform 0.3s ease;
 }

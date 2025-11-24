@@ -29,12 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark"); //add this
       // Change logo to white version in dark mode
-      logo.src = "bayan-white.png";
+      if (logo) {
+        logo.src = "bayan-white.png";
+      }
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light"); //add this
       // Change logo back to original in light mode
-      logo.src = "bayan.png";
+      if (logo) {
+        logo.src = "bayan.png";
+      }
     }
   }
 
