@@ -434,6 +434,84 @@ body.dark-mode {
   color: var(--primary-color) !important;
 }
 
+/* Dark mode specific styling for project section */
+[data-theme="dark"] .project .card {
+  background: #ffffff;
+  color: #000000;
+}
+
+[data-theme="dark"] .project-bio h3,
+[data-theme="dark"] .project-bio p {
+  color: #000000;
+}
+
+[data-theme="dark"] .project .card:hover {
+  background: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .project .card:hover .project-bio h3,
+[data-theme="dark"] .project .card:hover .project-bio p {
+  color: #000000 !important;
+}
+
+/* Dark mode specific styling for project elements */
+[data-theme="dark"] .tool-tag {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .tool-tag:hover {
+  background: var(--primary-color);
+  color: var(--text-color-two);
+}
+
+[data-theme="dark"] .card:hover .tool-tag {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-video .btn {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-video .btn:hover {
+  background: var(--primary-color);
+  color: var(--text-color-two);
+}
+
+[data-theme="dark"] .card:hover .project-video .btn {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific styling for project certificate links */
+[data-theme="dark"] .project-link a {
+  color: #000000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+[data-theme="dark"] .project-link a:hover {
+  background: var(--primary-color);
+  color: var(--text-color-two);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-link a i {
+  color: #000000;
+}
+
+[data-theme="dark"] .project-link a:hover i {
+  color: var(--text-color-two);
+}
+
 /* Responsive styles for experience cards on mobile */
 @media (max-width: 768px) {
   .experience .card {
