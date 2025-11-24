@@ -30,14 +30,22 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem("theme", "dark"); //add this
       // Change logo to white version in dark mode
       if (logo) {
-        logo.src = "bayan-white.png";
+        logo.src = "./bayan-white.png";
+        // Add error handling
+        logo.onerror = function () {
+          console.log("Failed to load bayan-white.png");
+        };
       }
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light"); //add this
       // Change logo back to original in light mode
       if (logo) {
-        logo.src = "bayan.png";
+        logo.src = "./bayan.png";
+        // Add error handling
+        logo.onerror = function () {
+          console.log("Failed to load bayan.png");
+        };
       }
     }
   }
@@ -64,10 +72,16 @@ document.addEventListener('DOMContentLoaded', function () {
           toggleSwitch.checked = true;
         }
         // Set white logo for dark mode
-        logo.src = "bayan-white.png";
+        logo.src = "./bayan-white.png";
+        logo.onerror = function () {
+          console.log("Failed to load bayan-white.png on init");
+        };
       } else {
         // Set original logo for light mode
-        logo.src = "bayan.png";
+        logo.src = "./bayan.png";
+        logo.onerror = function () {
+          console.log("Failed to load bayan.png on init");
+        };
       }
     }
   }
