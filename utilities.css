@@ -107,7 +107,7 @@ h2::selection {
 .card {
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
   cursor: pointer;
@@ -418,7 +418,7 @@ body.dark-mode {
 }
 
 [data-theme="dark"] .skill-card .skill-icon {
-  color: #ffffff;
+  color: #000000;
 }
 
 [data-theme="dark"] .skill-card:hover {
